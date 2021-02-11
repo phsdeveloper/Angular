@@ -1,0 +1,7 @@
+<h2>Ng container funcionado com ngFor e NG if</h2>
+<ng-container *ngFor="let nomeDia of DiasSemana">
+    <div *ngIf="nomeDia == hoje">
+        {{nomeDia}}
+    </div>
+</ng-container>
+

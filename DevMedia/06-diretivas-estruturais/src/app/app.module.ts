@@ -8,6 +8,7 @@ import { ComponentNgSwitchComponent } from './component-ng-switch/component-ng-s
 import { ComponentNgSwitchRevistaComponent } from './component-ng-switch-revista/component-ng-switch-revista.component';
 import { ComponentNgSwitchLivroComponent } from './component-ng-switch-livro/component-ng-switch-livro.component';
 import { ComponentNgSwitchFilmeComponent } from './component-ng-switch-filme/component-ng-switch-filme.component';
+import { ComponentNgforNgifComponent } from './component-ngfor-ngif/component-ngfor-ngif.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ComponentNgSwitchFilmeComponent } from './component-ng-switch-filme/com
     ComponentNgSwitchComponent,
     ComponentNgSwitchRevistaComponent,
     ComponentNgSwitchLivroComponent,
-    ComponentNgSwitchFilmeComponent
+    ComponentNgSwitchFilmeComponent,
+    ComponentNgforNgifComponent
   ],
   imports: [
     BrowserModule
