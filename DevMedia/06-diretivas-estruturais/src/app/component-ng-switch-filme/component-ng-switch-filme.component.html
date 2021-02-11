@@ -1,6 +1,10 @@
-<p>component-ng-switch-filme works!</p>
-<div [ngSwitch] = "produto.tipo">
-<app-component-ng-switch-filme   *ngngSwitchCase="filme"   [produto]="produto"></app-component-ng-switch-filme>
-<app-component-ng-switch-livro   *ngngSwitchCase="livro"   [produto]="produto"></app-component-ng-switch-livro>
-<app-component-ng-switch-revista *ngngSwitchCase="revista" [produto]="produto"></app-component-ng-switch-revista>
-</div>
+<h3 style="background-color: #c3e6cb;">Componente filme (inicio)</h3>
+<h4>Dados obtidos diretamente via propriedades/variaveis.</h4>
+<p>Titulo do Filme: {{Titulo}}</p>
+<p>Ano do Filme: {{ano}}</p>
+<h4>Dados obtidos diretamente via Objeto.</h4>
+<ul>
+    <li>Ano do Filme: {{Obj_Completo.ano}}</li>
+    <li>Titulo do Filme: {{Obj_Completo.titulo}}</li>
+</ul>
+<h3 style="background-color: #c3e6cb;">Componente filme (Fim)</h3>

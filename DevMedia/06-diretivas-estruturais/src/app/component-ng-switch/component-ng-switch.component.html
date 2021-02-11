@@ -1,3 +1,26 @@
-<h1>component-ng-switch works!</h1>
+<h1>Componente com ngSwitch Funcionando</h1>
 
+<div [ngSwitch]="produto.tipo">
+    <app-component-ng-switch-filme   
+        *ngSwitchCase="'filme'"   
+        [Titulo]="produto.titulo" 
+        [ano]="produto.ano" 
+        [Obj_Completo]="produto">
+    </app-component-ng-switch-filme>
 
+    <app-component-ng-switch-livro   
+        *ngSwitchCase="'livro'"   
+        [Titulo]="produto.titulo" 
+        [ano]="produto.ano" 
+        [Obj_Completo]="produto">
+    </app-component-ng-switch-livro>
+
+    <app-component-ng-switch-revista 
+        *ngSwitchCase="'revista'" 
+        [Titulo]="produto.titulo" 
+        [ano]="produto.ano" 
+        [Obj_Completo]="produto">
+    </app-component-ng-switch-revista>
+    
+    <span *ngSwitchDefault>Produto desconhecido</span>
+</div>
