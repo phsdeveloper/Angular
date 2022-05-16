@@ -6,14 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cpntador.component.css'] // Caminho para o css do componente.
 })
 export class CpntadorComponent implements OnInit {
-public numero = 1; //Adicionado uma propriedade publica que será utilizada para popular a tela.
+  public numero = 1; //Adicionado uma propriedade publica que será utilizada para popular a tela.
+  public mensagem = "";
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public incrementar()
-  {
+  public incrementar() {
     this.numero++;
+    this.mensagem = "";
+  }
+
+  public decrementar() {
+    if (this.numero > 0) {
+      this.numero--;
+      this.mensagem = "";
+    }
+    else {
+      this.mensagem = "Não é possível ficar com o número menor que zero";
+    }
   }
 }

@@ -22,5 +22,11 @@
         [Obj_Completo]="produto">
     </app-component-ng-switch-revista>
     
+    <app-component-ng-switch-revista 
+    *ngSwitchCase="'Casa'" 
+    [Titulo]="produto.titulo" 
+    [ano]="produto.ano" 
+    [Obj_Completo]="produto">
+</app-component-ng-switch-revista>
     <span *ngSwitchDefault>Produto desconhecido</span>
 </div>

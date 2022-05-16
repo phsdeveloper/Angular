@@ -11,7 +11,8 @@ export class ComponentNgForComponent implements OnInit
   [
     'Como morrem os pobres e outros ensaios',
     'A revolução dos bichos',
-    '1988'
+    '1988',
+    'Paulo testes'
   ];
   constructor() { }
 
