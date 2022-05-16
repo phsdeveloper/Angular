@@ -13,7 +13,7 @@ export class ComponentNgSwitchComponent implements OnInit
   ngOnInit(): void {
   }
 
-  produtoTipo: string = "filme";
+
   
  //public produto = 
  //{
@@ -23,23 +23,22 @@ export class ComponentNgSwitchComponent implements OnInit
  //};
 
 
-  //public produto = 
-  //{
-  //  tipo: 'revista',
-  //  titulo: 'revista - titulo',
-  //  ano: '2000 (ano Revista)'
-  //};
+public produto = 
+{
+ tipo: 'revista',
+titulo: 'revista - titulo',
+ ano: '2000 (ano Revista)',
+};
 
- public produto = 
- {
-   tipo: 'livro',
-   titulo: 'livro - titulo',
-   ano: '2000 (ano livro)'
- };
-
-  
+ //public produto = 
+ //{
+//   tipo: 'livro',
+//   titulo: 'livro - titulo',
+//   ano: '2000 (ano livro)'
+ //};
   
   public setProduto(produto) {
     this.produto = produto;
   }
+
 }

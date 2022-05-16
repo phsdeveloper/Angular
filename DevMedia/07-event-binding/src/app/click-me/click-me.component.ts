@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './click-me.component.html',
   styleUrls: ['./click-me.component.css']
 })
-export class ClickMeComponent implements OnInit {
+export class ClickMeComponent implements OnInit
+{
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  public click(){}
+
 
 }
