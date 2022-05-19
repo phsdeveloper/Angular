@@ -11,5 +11,7 @@ export class CaixaDeTextoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public MetodoTeste(event) {
+    console.log(event.target.value.length);
+  }
 }
