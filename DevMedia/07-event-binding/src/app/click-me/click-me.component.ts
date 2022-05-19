@@ -13,7 +13,9 @@ export class ClickMeComponent implements OnInit
 
   ngOnInit(): void {
   }
-  public click(){}
+  public onClick(){
+    console.log("Recebi um click");
+  }
 
 
 }
