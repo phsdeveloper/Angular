@@ -14,20 +14,16 @@ export class TitleComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.title += " Evento ngOnChanges executado em: " + this.ObterDataHora();
   }
-
+//adasda
   ngOnChanges(changes: SimpleChanges): void {
-    this.ngOnInitTeste+= ` | Alterado em: ` + this.ObterDataHora();
+    this.ngOnInitTeste += ` | Alterado em: ` + this.ObterDataHora();
   }
-
 
   private ObterDataHora() {
     let DataHoraRetorno: string = "";
     let data = new Date();
     DataHoraRetorno = data.getDate().toString() + `/` + data.getMonth().toString() + `/` + data.getFullYear().toString();
     DataHoraRetorno += ` ` + data.getHours().toString() + `:` + data.getMinutes().toString() + `:` + data.getSeconds().toString();
-
     return DataHoraRetorno;
   }
-
-
 }
