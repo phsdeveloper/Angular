@@ -12,9 +12,13 @@ import {
   selector: 'app-root',
   template: `
               <app-title ngOnInitTeste="Alterado"></app-title>
+              <br/>
+              <app-title ngOnInitTeste="Componente para testar o evento ngOnDestroy" *ngIf="destruir"></app-title>
               <router-outlet></router-outlet>
               <br/> 
               <span>Ciclos de vida do Angular | </span> <span>{{valor}} | </span><button (click)="adicionar()">Adicionar</button>
+              <br/>
+              <span>Ciclo dde vida ngOnDestroy</span> <button (click)="destruirComponente()">Destruir componente</button>
 
   `
 })
@@ -27,6 +31,8 @@ export class AppComponent implements OnInit,
   {
 
   public valor: number = 1;
+  public destruir:boolean = true;
+
   constructor() { }
   /**
    * Método criado para exemplificar o ciclo dde vida de um click
@@ -35,6 +41,10 @@ export class AppComponent implements OnInit,
   public adicionar(): number {
     console.log("Chamado metodo Adicionar");
     return this.valor += 1;
+  }
+
+  public destruirComponente():void{
+    this.destruir = false;
   }
 
 
