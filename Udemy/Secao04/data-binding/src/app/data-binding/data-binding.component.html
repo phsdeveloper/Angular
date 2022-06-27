@@ -7,4 +7,16 @@
 <p>{{idade <=30}}</p>
 <p>Idade + 1 = {{idade +1}}</p>
 
+<br>
+<h2>Property Binding</h2>
+<button [disabled]="btn_Disabled">{{btn_title}}</button>
 
+<br/>
+<h2>Event Binding</h2>
+<button (click)="alertInfo()">Event Binding</button>
+<button (click)="alertInfoValor('Dados enviados do HTML')">Event Binding com valor</button>
+<button (click)="alertInfoEvent($event)">Event Binding com Event</button>
+
+<div (mousemove)="MouseMoveTeste($event)" style="background-color: red; width: 300px;height: 300px;">
+<p><strong>X:{{position.x}} - Y:{{position.y}}</strong></p>
+</div>
