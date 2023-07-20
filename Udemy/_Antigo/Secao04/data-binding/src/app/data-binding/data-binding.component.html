@@ -1,0 +1,28 @@
+<h2>Exemplos dos data Binding do Angular</h2>
+
+<h3>Interpolation</h3>
+
+<p>{{nome}} tem {{idade}} anos</p>
+<p>{{nome}} tem mais de 30 anos?</p>
+<p>{{idade <=30}}</p>
+        <p>Idade + 1 = {{idade +1}}</p>
+
+        <br>
+        <h2>Property Binding</h2>
+        <button [disabled]="btn_Disabled">{{btn_title}}</button>
+
+        <br />
+        <h2>Event Binding</h2>
+        <button (click)="alertInfo()">Event Binding</button>
+        <button (click)="alertInfoValor('Dados enviados do HTML')">Event Binding com valor</button>
+        <button (click)="alertInfoEvent($event)">Event Binding com Event (apenas console)</button>
+
+        <div (mousemove)="MouseMoveTeste($event)" style="background-color: red; width: 300px;height: 300px;">
+            <p>Evento MouseMove, obtendo a posição X e Y</p>
+            <p><strong>X:{{position.x}} - Y:{{position.y}}</strong></p>
+        </div>
+
+        <h2>Seção 04 - Aula 2: Two-way binding</h2>
+        <input type="text" [(ngModel)]="nome" (keypress)="TotalCaracteres()">
+        <span><strong [(ngModel)]="totalCaracteres">Total de caracteres {{totalCaracteres}}</strong></span>
+        
