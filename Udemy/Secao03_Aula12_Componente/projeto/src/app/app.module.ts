@@ -1,11 +1,11 @@
 /*****************************************************************************************
- *                                 Arquivo app.module.ts                                   
+ *                                 Arquivo app.module.ts                                 * 
  *****************************************************************************************
- *                                                                                           
- *                                                                                           
- *                                                                                            
- *                                                                                           
- *                                                                                             
+ * Nesse arquivo fica todas as referencias de componentes que serão utilizados no        *                                                                                  
+ * projeto                                                                               *          
+ *                                                                                       *    
+ *                                                                                       *   
+ *                                                                                       *     
  *****************************************************************************************/
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
