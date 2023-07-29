@@ -2,7 +2,13 @@ import { Component, OnInit } from '@angular/core';
                                                         
 @Component({                                                                                            
   selector: 'app-root',                                                                                                   
-  template:'<router-outlet></router-outlet>'                                                       
+  template:`
+            <div class="container">
+              <app-title ValorOnChanges= " Valor default alterado"></app-title>
+              <router-outlet></router-outlet>
+            </div>
+             
+            `                                                     
 })                                                        
 export class AppComponent implements OnInit{                                                        
   title = 'Projeto Seção 03';  
