@@ -84,15 +84,15 @@ export class AppComponent implements OnInit,
 
   ngAfterViewChecked(): void {
     //this.Evento_ngAfterViewChecked = "ngAfterViewChecked Chamado em: " + this.FUN_ObterDataAtual();
-     console.log("ngAfterViewChecked Chamado em: " + this.FUN_ObterDataAtual());
+     console.log("ngAfterViewChecked    | Chamado em: " + this.FUN_ObterDataAtual());
   }
   ngAfterViewInit(): void {
     //this.Evento_ngAfterViewInit = "ngAfterViewInit Chamado em:" + this.FUN_ObterDataAtual();
-    console.log("ngAfterViewInit Chamado em: " + this.FUN_ObterDataAtual());
+    console.log("ngAfterContentInit    | Chamado em: " + this.FUN_ObterDataAtual());
   }
   ngAfterContentChecked(): void {
     //this.Evento_ngAfterContentChecked = "AfterContentChecked Chamado em: " + this.FUN_ObterDataAtual();
-    console.log("ngAfterContentChecked Chamado em: " + this.FUN_ObterDataAtual());
+    console.log("ngAfterContentChecked | Chamado em: " + this.FUN_ObterDataAtual());
   }
 
 
