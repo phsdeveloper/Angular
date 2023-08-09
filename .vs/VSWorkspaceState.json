@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Udemy",
+    "\\Udemy\\Secao03_Aula12_Componente",
+    "\\Udemy\\Secao03_Aula12_Componente\\projeto",
+    "\\Udemy\\Secao03_Aula12_Componente\\projeto\\.angular",
+    "\\Udemy\\Secao03_Aula12_Componente\\projeto\\src",
+    "\\Udemy\\Secao03_Aula12_Componente\\projeto\\src\\app",
+    "\\Udemy\\Secao03_Aula12_Componente\\projeto\\src\\app\\title",
+    "\\Udemy\\Secao03_Aula12_Componente\\projeto\\src\\assets"
   ],
+  "SelectedNode": "\\Udemy",
   "PreviewInSolutionExplorer": false
 }
