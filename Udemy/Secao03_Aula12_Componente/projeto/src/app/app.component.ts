@@ -4,7 +4,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   selector: 'app-root',                                                                                                   
   template:`
             <div class="container">
-              <app-title></app-title>
+              <app-title *ngIf="destruir"></app-title>
 
                 <div div class="row col-sm-5 col-md-12 mt-4">
                   <div class="card">
@@ -14,7 +14,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
                                     <div class="col-sm-5 col-md-6">
                                       <div class="card">
                                           <div class="card-header text-center">
-                                              <strong> Seção 03 Aula 117. ngDoCheck</strong>
+                                              <strong> Seção 03 Aula 17. ngDoCheck</strong>
                                           </div>
                                           <div class="card-body">
                                               <h5 class="card-title">Dados verifição</h5>
@@ -30,11 +30,22 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
                                           </div>
                                       </div>
                                     </div>
+                                    <div class="col-sm-5 col-md-6">
+                                      <div class="card">
+                                          <div class="card-header text-center">
+                                              <strong> Seção 03 Aula 18. ngOnDestroy</strong>
+                                          </div>
+                                          <div class="card-body">
+                                              <h5 class="card-title">Vai tirar da tela o componete Title (destruir)</h5>
+                                              <button class="btn btn-primary" (click)="FUN_DestruirComponente()"*ngIf="destruir">Destruir componente</button>
+                                              <button class="btn btn-primary" (click)="FUN_DestruirComponente()" *ngIf="!destruir">Recriar componente</button>
+                                          </div>
+                                      </div>
+                                    </div>
                           </div>
                        </div>
                   </div>
                 </div>
-
                 <router-outlet></router-outlet>
             </div>
              
@@ -60,6 +71,7 @@ export class AppComponent implements OnInit,
   public Evento_Construtor:string="";
 
   public valor:number =1;
+  public destruir:boolean = true;
 
   
 
@@ -115,36 +127,10 @@ export class AppComponent implements OnInit,
   public FUN_Adicionar():number{
     return this.valor+=1;
   }
+
+  
+
+  public FUN_DestruirComponente():void{
+    this.destruir = !this.destruir;
+  }
 }                                                        
-
-/**
- * 
- * 
-  Construtor Chamado 29/7/2023 17:39:12
-app.component.ts:91 ngDoCheck             | Chamado em: 29/7/2023 17:39:12
-app.component.ts:87 ngAfterContentInit    | Chamado em: 29/7/2023 17:39:12
-app.component.ts:83 ngAfterContentChecked | Chamado em: 29/7/2023 17:39:12
-app.component.ts:79 ngAfterViewInit       | Chamado em: 29/7/2023 17:39:12
-app.component.ts:75 ngAfterViewChecked    | Chamado em: 29/7/2023 17:39:12
-
-app.component.ts:91 ngDoCheck Chamado em: 29/7/2023 17:39:12
-app.component.ts:83 ngAfterContentChecked Chamado em: 29/7/2023 17:39:12
-app.component.ts:75 ngAfterViewChecked Chamado em: 29/7/2023 17:39:12
-app.component.ts:91 ngDoCheck Chamado em: 29/7/2023 17:39:12
-app.component.ts:83 ngAfterContentChecked Chamado em: 29/7/2023 17:39:12
-app.component.ts:75 ngAfterViewChecked Chamado em: 29/7/2023 17:39:12
-
-app.component.ts:91 ngDoCheck Chamado em: 29/7/2023 17:39:15
-app.component.ts:83 ngAfterContentChecked Chamado em: 29/7/2023 17:39:15
-app.component.ts:75 ngAfterViewChecked Chamado em: 29/7/2023 17:39:15
-
-app.component.ts:91 ngDoCheck Chamado em: 29/7/2023 17:39:17
-app.component.ts:83 ngAfterContentChecked Chamado em: 29/7/2023 17:39:17
-app.component.ts:75 ngAfterViewChecked Chamado em: 29/7/2023 17:39:17
-
-ngDoCheck Chamado em: 29/7/2023 17:40:44
-app.component.ts:83 ngAfterContentChecked Chamado em: 29/7/2023 17:40:44
-app.component.ts:75 ngAfterViewChecked Chamado em: 29/7/2023 17:40:44
-
-
- */

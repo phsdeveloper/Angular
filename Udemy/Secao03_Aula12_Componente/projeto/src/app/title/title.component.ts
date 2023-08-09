@@ -1,5 +1,5 @@
 import { publishFacade } from '@angular/compiler';
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -8,17 +8,19 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 
 
-export class TitleComponent implements OnInit,OnChanges {
+export class TitleComponent implements OnInit,OnChanges,OnDestroy {
   public title:string = "Bem vindo ao componente Title"
-  public ComponentName:string = "title ";
+  public ComponentName:string = "Title ";
   @Input() ValorOnChanges: string = "Valor Incial OnChanges";
   constructor(){
 
 
   }
+  ngOnDestroy(): void {
+    alert('componente ' + this.ComponentName + ' destruido com sucesso.');
+  }
   
     ngOnInit():void{
-
 
      }
 
