@@ -46,6 +46,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
                        </div>
                   </div>
                 </div>
+                <app-data-binding></app-data-binding>
                 <router-outlet></router-outlet>
             </div>
              
