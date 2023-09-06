@@ -10,7 +10,7 @@
                     <div class="col-sm-5 col-md-4">
                         <div class="card">
                             <div class="card-header text-center">
-                                <strong> Seção 04 Aula 21. Interpolation</strong>
+                                <strong> Seção 04 - Aula 21. Interpolation</strong>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Exemplo de interpolation </h5>
@@ -26,22 +26,24 @@
                     </div>
 
 
-                    <div class="col-sm-5 col-md-4" *ngIf="false">
-                        <div class="card">
-                            <div class="card-header text-center">
-                                <strong>Seção 03 Aula 15. ngOnInit</strong>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Valores exibidos no console para essa aula</h5>
-                                <p class="card-text">Toda a logica está no arquivo <strong>app.component.ts</strong> que
-                                    é o arquivo que contém a
-                                    configuração de entrada do Angular
-
-                                </p>
-                                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                            </div>
-                        </div>
-                    </div>
+    <div class="col-sm-5 col-md-4" *ngIf="true">
+        <div class="card">
+            <div class="card-header text-center">
+                <strong>Seção 04 - 22. Property Binding</strong>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">É a funcionalidade de alimentar a tela com informações/valores vindo do "backend" do Angular o TypeScript</h5>
+                <p class="card-text">Toda a logica está no arquivo <strong>data-binding.component.ts</strong> que é o arquivo que contém toda a logica 
+                    necessária para que a tela funcione
+                </p>
+                <p><strong>Nome vindo do TS: </strong><span [textContent]="nome"></span></p>
+                <button class="btn btn-primary" [disabled]="checkedDisabled">Desabilitar</button>
+                <div class="row">
+                    <p>Caminho da imagem proveniente da propriedade imgSRC do typeScript <img [src]="imgSRC" [title]="imgTitle"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
                     <div class="col-sm-5 col-md-4" *ngIf="false">
                         <div class="card">
