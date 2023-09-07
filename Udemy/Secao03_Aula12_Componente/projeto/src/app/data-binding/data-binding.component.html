@@ -54,22 +54,26 @@
                                 <strong>Seção 04 Aula 23. Event Binding</strong>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Passa para o TypeScript todas as infomrações de um elemento HTML </h5>
-                                <button type="button" class="btn btn-primary" (click)="FUN_alertaInfo($event)">Evento</button>
+                                <h5 class="card-title">Passa para o TypeScript todas as infomrações de um elemento HTML
+                                </h5>
+                                <button type="button" class="btn btn-primary"
+                                    (click)="FUN_alertaInfo($event)">Evento</button>
                                 <p></p>
                                 <div class="row" *ngIf="mensagemAlertVisvel">
                                     <div col-md-12>
                                         <div class="alert alert-info">{{mensagemAlertTexto}}</div>
                                     </div>
-                                    
+
 
                                 </div>
-                                <div style="background-color: #f8d7da; width: 300px; height: 300px;" (mousemove)="FUN_MouseMovePosition($event)">
+                                <div style="background-color: #f8d7da; width: 300px; height: 300px;"
+                                    (mousemove)="FUN_MouseMovePosition($event)">
                                     <div class="alert alert-dark">
-                                        <p><strong>Mensagem: </strong> <span [textContent]="position.message"></span></p>
+                                        <p><strong>Mensagem: </strong> <span [textContent]="position.message"></span>
+                                        </p>
                                         <p><strong>Eixo x: </strong> <span [textContent]="position.x"></span></p>
                                         <p><strong>Eixo y: </strong> <span [textContent]="position.y"></span></p>
-                                    </div> 
+                                    </div>
                                     <div col-md-12>
                                         <div class="alert alert-dark">Evento mousemove</div>
                                     </div>
@@ -78,6 +82,36 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="col-sm-5 col-md-4" *ngIf="true">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong>Seção 04 Aula 24. Two-way binding</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Faz o imput dos dados atravez do client (front)
+                                </h5>
+                                <p class="card-text">Realiza o input dos dados via front na(s) variavel(is) declarada no arquivo TS, e com isso o resultado inserido pode ser usado em toda a tela</p>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="nomeAula24" placeholder="Escreva algo"/>
+                                </div>
+                                <div class="row" *ngIf="nomeAula24!=''">
+                                    <div col-md-12>
+                                        <div class="alert alert-info"><strong><i class="fa fa-commenting" aria-hidden="true"></i></strong>&nbsp;{{nomeAula24}}</div>
+                                    </div>
+                                    <small>Total caracteres: {{nomeAula24.length}}</small>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -86,4 +120,4 @@
 
 </div>
 <br>
-<p>.</p>
+<p></p>

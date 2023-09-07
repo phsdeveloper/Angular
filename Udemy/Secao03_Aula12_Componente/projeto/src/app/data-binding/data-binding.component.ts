@@ -33,7 +33,7 @@ export class DataBindingComponent implements OnInit {
   public position: { x: number, y: number, message: string } = { x: 0, y: 0, message: '' };
 
   public FUN_alertaInfo(valor: MouseEvent): void {
-
+    
     this.mensagemAlertTexto = `Botão acionado em: ` + this.FUN_ObterDataAtual() + ' para mais informações veja o console';
     console.log(valor);
     this.mensagemAlertVisvel = true;
@@ -45,6 +45,14 @@ export class DataBindingComponent implements OnInit {
     this.position.message = 'Valor alterado em: ' + this.FUN_ObterDataAtual();
   }
   // #endregion Aula 23
+
+
+   // #region Aula 24
+
+   public nomeAula24:string = "";
+
+
+   // #endregion Aula 24
 
   private FUN_ObterDataAtual() {
     let DataAtual: Date = new Date;
