@@ -48,6 +48,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
                 </div>
                 <app-data-binding></app-data-binding>
                 <app-diretivas-estruturais></app-diretivas-estruturais>
+                <app-diretivasatributos></app-diretivasatributos>
                 <router-outlet></router-outlet>
             </div>
              

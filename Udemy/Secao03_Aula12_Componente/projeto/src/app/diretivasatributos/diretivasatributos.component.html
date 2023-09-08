@@ -1,0 +1,56 @@
+<div class="mt-4">
+
+    <div div class="row col-sm-5 col-md-12">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3><strong>{{title}}</strong></h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 04 - Aula 29. ngClass</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Adiciona/Remove classes css em componentes HTML </h5>
+                                <p class="card-text">Esse atributo permite adicionar ou remover classes HTML utilizando comparações que retornam um valor booleano ou uma propriedade boolena.</p>
+                                <div [ngClass]="'row'">
+                                    <div
+                                        [ngClass]="{'alert':true,'alert-success': aula29_ValorNgClass,'alert-danger': !aula29_ValorNgClass  }">
+                                        Texto
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 04 - Aula 29. ngClass</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Exemplo de interpolation </h5>
+                                <h6>valor vindo direto do arquivo type script</h6>
+
+                                <h6>fazendo comparação booleana</h6>
+                                <h6>fazendo conta</h6>
+                                <p class="card-text">Fazendo conta 10 % 2 <strong>{{10 % 2}}</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+<p></p>
