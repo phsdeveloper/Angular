@@ -1,0 +1,82 @@
+<div class="mt-4">
+
+    <div div class="row col-sm-5 col-md-12">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3><strong>{{title}}</strong></h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-sm-5 col-md-4" *ngIf="true">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 26. *ngIf</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cria e destroi um componente html</h5>
+                                <h6>O ngIf cria ou destroi um elemento HTML de acordo com o valor booleano que pode vir do TS ou de uma condição adicionado via interpolation</h6>
+
+                                <div class="row">
+                                    <div class="alert alert-info">
+                                        <span>{{mensagem_Aula26}}</span>
+                                    </div>
+
+                                </div>
+                                <p *ngIf="Condition_Aula26; else elseBlock" class="text-success"> <strong> Visivel usando ngIF</strong></p>
+                                <ng-template #elseBlock>
+                                    <p class="text-danger"><strong>Paragrafo não visivel (template)</strong></p>       
+                                </ng-template>
+
+                                <button (click)="FUN_Aula26_Onclick()" class="btn btn-primary">{{_aula26_btnText}}</button>
+                                <p *ngIf="_aula26_ConditionClick; else elseBTN">Valor da variavel _aula26_ConditionClick = <span class="text-success">{{_aula26_ConditionClick}}</span></p>
+                                <ng-template #elseBTN>
+                                    <p>Valor da variavel _aula26_ConditionClick = <span class="text-danger">{{_aula26_ConditionClick}}</span></p>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-5 col-md-4" *ngIf="true">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 27. *ngFor</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Faz uma interação em uma lista</h5>
+                                <button type="button" class="btn btn-primary" (click)="FUN_aula27_onClickAddList()">ADD</button>
+                                <ul>
+                                    <li *ngFor="let item of aula27_ListaObjetos; let i=index;" (click)="Fun_aula27_onClickEventList(i)">
+                                      [{{i+1}}]  <strong> Nome:</strong> {{item.nome}} <strong>Idade:</strong> {{item.idade}} <strong>Adicionado em:</strong> {{item.AdicionadoEm}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-4" *ngIf="false">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção xx - Aula xx. jjjjjjjjjjjjj</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">titulo </h5>
+                                <h6>valor vindo direto do arquivo type script</h6>
+                                <h6>fazendo comparação booleana</h6>
+                                <h6>fazendo conta</h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br>
+<p></p>

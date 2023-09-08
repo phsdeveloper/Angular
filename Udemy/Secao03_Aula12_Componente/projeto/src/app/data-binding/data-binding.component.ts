@@ -51,7 +51,7 @@ export class DataBindingComponent implements OnInit {
 
    public nomeAula24:string = "";
 
-
+    
    // #endregion Aula 24
 
   private FUN_ObterDataAtual() {
