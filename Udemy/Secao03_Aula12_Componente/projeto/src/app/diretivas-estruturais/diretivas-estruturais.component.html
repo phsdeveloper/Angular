@@ -55,6 +55,42 @@
                         </div>
                     </div>
 
+                    <div class="col-sm-5 col-md-4" *ngIf="true">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 28. *ngSwitch</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Igual ao switch do C# </h5>
+
+                                <div class="row">
+                                    <div class="input-group input-group-sm mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="aula28_Nome" placeholder="Escreva algo"/>
+                                    </div>
+                                    <div class="col-md-12" [ngSwitch]="aula28_Nome">
+                                        <div *ngSwitchCase="'Paulo'" class="alert alert-info">
+                                            <span> <strong>selecionado no ngSwitch:</strong> {{aula28_Nome}}</span>
+                                        </div>
+                                        <div *ngSwitchCase="'Samuel'" class="alert alert-warning">
+                                            <span><strong>Valor selecionado no ngSwitch:</strong> {{aula28_Nome}}</span>
+                                        </div>
+                                        <div *ngSwitchCase="'Monique'" class="alert alert-dark">
+                                            <span><strong>Valor selecionado no ngSwitch:</strong> {{aula28_Nome}}</span>
+                                        </div>
+                                        <div *ngSwitchDefault class="alert alert-danger">
+                                            <span><strong>Valor selecionado no ngSwitch não localizado:</strong> {{aula28_Nome}}</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="col-sm-5 col-md-4" *ngIf="false">
                         <div class="card">
                             <div class="card-header text-center">
@@ -68,8 +104,6 @@
                             </div>
                         </div>
                     </div>
-
-
 
 
                 </div>

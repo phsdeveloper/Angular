@@ -37,20 +37,24 @@ export class DiretivasEstruturaisComponent implements OnInit {
   }
   //-----------------------------------------------------------------------------
 
-  public aula27_ListaObjetos : Array<{nome: string,idade:number,AdicionadoEm:String}>=[{nome:"Paulo Santos",idade:30, AdicionadoEm:this.FUN_ObterDataAtual()},{nome:"Samuel Santos",idade:7, AdicionadoEm:this.FUN_ObterDataAtual()}];
+  public aula27_ListaObjetos : Array<{nome: string,idade:number,AdicionadoEm:String}>=[
+                                                                                       {nome:"Paulo Santos" ,idade:30, AdicionadoEm:this.FUN_ObterDataAtual()}
+                                                                                      ,{nome:"Samuel Santos",idade:7 , AdicionadoEm:this.FUN_ObterDataAtual()}
+                                                                                      ];
 
   public FUN_aula27_onClickAddList() : void {
     this.aula27_ListaObjetos.push({nome: "Monique",idade:39, AdicionadoEm:this.FUN_ObterDataAtual()});
   }
 
   public Fun_aula27_onClickEventList(event:number){
-   
       this.aula27_ListaObjetos.splice(event,1);
-
   }
 
+//-----------------------------------------------------------------------------
 
-
+  public aula28_Nome: string = "Paulo";
+  
+  //-----------------------------------------------------------------------------
 
   private FUN_ObterDataAtual() {
     let DataAtual: Date = new Date;
