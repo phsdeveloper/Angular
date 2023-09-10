@@ -29,7 +29,25 @@
                     <div class="col-sm-5 col-md-4">
                         <div class="card">
                             <div class="card-header text-center">
-                                <strong> Seção 04 - Aula 29. ngClass</strong>
+                                <strong> Seção 05 - Aula 30. ngStyle</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Adiciona/Remove style css em componentes HTML</h5>
+                                <p class="card-text">Adiciona/Remove style css em componentes HTML com valores vindo ou não do TypeScript</p>
+
+                                <button type="button" class="btn btn-primary" (click)="FUN_aula30_AlterarAltura()"> {{aula30_TextoBoao}}</button>
+                                <p></p>
+                                <div [ngStyle]="{'height':aula30_heigth,'background':aula30_backgroudColor,'width': '300px'}">
+                                    <span><strong>Tamanho: </strong> {{aula30_heigth}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 04 - Aula 30. ngStyle</strong>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Exemplo de interpolation </h5>
