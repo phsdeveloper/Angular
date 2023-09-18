@@ -55,7 +55,8 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Permite que a transição dos dados sejam bi direcional</h5>
-                                <p class="card-text">Ou seja, os dados quando alterados tanto no HTML ou no TypeScript são atualizados automaticamente para os dois locais</p>
+                                <p class="card-text">Ou seja, os dados quando alterados tanto no HTML ou no TypeScript
+                                    são atualizados automaticamente para os dois locais</p>
                                 <div class="input-group input-group-sm mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-pencil"
@@ -66,9 +67,11 @@
                                         placeholder="Escreva algo" />
                                 </div>
                                 <div style="text-align: right;">
-                                    <button type="button" class="btn btn-primary" (click)="FUN_aula31_Adicionar()"><i class="fa fa-plus-circle"></i> Adicionar</button>
+                                    <button type="button" class="btn btn-primary" (click)="FUN_aula31_Adicionar()"><i
+                                            class="fa fa-plus-circle"></i> Adicionar</button>
                                 </div>
-                                <table class="table table-bordered table-responsive m-2" *ngIf="aula31_ListaNomes.length > 0">
+                                <table class="table table-bordered table-responsive m-2"
+                                    *ngIf="aula31_ListaNomes.length > 0">
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
@@ -81,7 +84,9 @@
                                             <td>{{item.nome}}</td>
                                             <td>{{item.AdicionadoEm}}</td>
                                             <td>
-                                                <button type="button" class="btn btn-danger btn-sm" (click)="FUN_aula31_Excluir(i)"><i class="fa fa-trash-o"></i></button>
+                                                <button type="button" class="btn btn-danger btn-sm"
+                                                    (click)="FUN_aula31_Excluir(i)"><i
+                                                        class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -90,7 +95,49 @@
                         </div>
                     </div>
                     <!---------------------------------------------------------------------------------------------->
-                    <div class="col-sm-5 col-md-4 mt-2">
+    <div class="col-sm-5 col-md-4 mt-2">
+        <div class="card">
+            <div class="card-header text-center">
+                <strong> Seção 05 - Aula 32. ng-template</strong>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Encapsula elementos HTML</h5>
+                <p class="card-text">Encapsula elementos HTML e verifica o que fazer antes que seja reinderizado no DOM do HTML, com isso economiza alguns nanosegundos, diferente do NgIf, que cria e depois destroi </p>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="aula32_Nome" placeholder="Escreva algo" />
+                </div>
+                <div style="text-align: right;">
+                    <button type="button" class="btn btn-primary" (click)="FUN_aula32_Adicionar()"><i class="fa fa-plus-circle"></i> Adicionar</button>
+                </div>
+                <ng-template [ngIf]="FUN_aula32_ComponenteVisivel()">
+                    <table class="table table-bordered table-responsive m-2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Adicionao em</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-template ngFor let-item [ngForOf]="aula32_ListaNomes" let-i="index">
+                                <tr>
+                                    <td>{{item.nome}}</td>
+                                    <td>{{item.AdicionadoEm}}</td>
+                                    <td> <button type="button" class="btn btn-danger btn-sm" (click)="FUN_aula32_Excluir(i)"> <i class="fa fa-trash-o"></i> </button> </td>
+                                </tr>
+                            </ng-template>
+                        </tbody>
+                    </table>
+                </ng-template>
+
+            </div>
+        </div>
+    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4 mt-2" *ngIf="false">
                         <div class="card">
                             <div class="card-header text-center">
                                 <strong> Seção 0X - Aula XX</strong>
@@ -106,7 +153,6 @@
                         </div>
                     </div>
                     <!---------------------------------------------------------------------------------------------->
-
 
 
 

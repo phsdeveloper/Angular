@@ -45,6 +45,22 @@ export class DiretivasatributosComponent implements OnInit {
     this.aula31_ListaNomes.splice(index,1);
   }
 
+//---------------------------------------------------------------------------------------------------------
+
+public aula32_Nome: string = "";
+public aula32_ListaNomes: Array<{ nome: string,AdicionadoEm:string }> = [];
+public FUN_aula32_Adicionar(): void {
+  this.aula32_ListaNomes.push({nome:this.aula32_Nome, AdicionadoEm:this.FUN_ObterDataAtual()});
+  this.aula32_Nome="";
+}
+
+public FUN_aula32_Excluir(index:number):void{
+  this.aula32_ListaNomes.splice(index,1);
+}
+public FUN_aula32_ComponenteVisivel():boolean {
+  return this.aula32_ListaNomes.length > 0;
+}
+//---------------------------------------------------------------------------------------------------------
   private FUN_ObterDataAtual() {
     let DataAtual: Date = new Date;
     let DataTela: string = DataAtual.getDate().toString().padStart(2, '0')
