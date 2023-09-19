@@ -48,7 +48,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
                 </div>
                 <app-data-binding></app-data-binding>
                 <app-diretivas-estruturais></app-diretivas-estruturais>
-                <app-diretivasatributos></app-diretivasatributos>
+                <app-diretivasatributos>
+                  <p class="text-info">Item 01 da tela | tag p</p>
+                  <span class="text-success">Item 02 da tela tag span</span>
+                </app-diretivasatributos>
                 <router-outlet></router-outlet>
             </div>
              
