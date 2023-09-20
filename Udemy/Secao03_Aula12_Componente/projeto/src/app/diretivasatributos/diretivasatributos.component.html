@@ -15,7 +15,8 @@
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Adiciona/Remove classes css em componentes HTML </h5>
-                                <p class="card-text">Esse atributo permite adicionar ou remover classes HTML utilizando comparações que retornam um valor booleano ou uma propriedade boolena.</p>
+                                <p class="card-text">Esse atributo permite adicionar ou remover classes HTML utilizando
+                                    comparações que retornam um valor booleano ou uma propriedade boolena.</p>
                                 <div [ngClass]="'row'">
                                     <div
                                         [ngClass]="{'alert':true,'alert-success': aula29_ValorNgClass,'alert-danger': !aula29_ValorNgClass  }">
@@ -29,20 +30,158 @@
                     <div class="col-sm-5 col-md-4">
                         <div class="card">
                             <div class="card-header text-center">
-                                <strong> Seção 04 - Aula 29. ngClass</strong>
+                                <strong> Seção 05 - Aula 30. ngStyle</strong>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Exemplo de interpolation </h5>
-                                <h6>valor vindo direto do arquivo type script</h6>
+                                <h5 class="card-title">Adiciona/Remove style css em componentes HTML</h5>
+                                <p class="card-text">Adiciona/Remove style css em componentes HTML com valores vindo ou
+                                    não do TypeScript</p>
 
-                                <h6>fazendo comparação booleana</h6>
-                                <h6>fazendo conta</h6>
-                                <p class="card-text">Fazendo conta 10 % 2 <strong>{{10 % 2}}</strong> </p>
+                                <button type="button" class="btn btn-primary" (click)="FUN_aula30_AlterarAltura()">
+                                    {{aula30_TextoBoao}}</button>
+                                <p></p>
+                                <div
+                                    [ngStyle]="{'height':aula30_heigth,'background':aula30_backgroudColor,'width': '300px'}">
+                                    <span><strong>Tamanho: </strong> {{aula30_heigth}}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 31. ngModel</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Permite que a transição dos dados sejam bi direcional</h5>
+                                <p class="card-text">Ou seja, os dados quando alterados tanto no HTML ou no TypeScript
+                                    são atualizados automaticamente para os dois locais</p>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-pencil"
+                                                aria-hidden="true"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Small"
+                                        aria-describedby="inputGroup-sizing-sm" [(ngModel)]="aula31_Nome"
+                                        placeholder="Escreva algo" />
+                                </div>
+                                <div style="text-align: right;">
+                                    <button type="button" class="btn btn-primary" (click)="FUN_aula31_Adicionar()"><i
+                                            class="fa fa-plus-circle"></i> Adicionar</button>
+                                </div>
+                                <table class="table table-bordered table-responsive m-2"
+                                    *ngIf="aula31_ListaNomes.length > 0">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Adicionao em</th>
+                                            <th>#</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of aula31_ListaNomes; let i=index;">
+                                            <td>{{item.nome}}</td>
+                                            <td>{{item.AdicionadoEm}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-sm"
+                                                    (click)="FUN_aula31_Excluir(i)"><i
+                                                        class="fa fa-trash-o"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 32. ng-template</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Encapsula elementos HTML</h5>
+                                <p class="card-text">Encapsula elementos HTML e verifica o que fazer antes que seja reinderizado no DOM do HTML, com isso economiza alguns nanosegundos, diferente do NgIf, que cria e depois destroi </p>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="aula32_Nome" placeholder="Escreva algo" />
+                                </div>
+                                <div style="text-align: right;">
+                                    <button type="button" class="btn btn-primary" (click)="FUN_aula32_Adicionar()"><i class="fa fa-plus-circle"></i> Adicionar</button>
+                                </div>
+                                <ng-template [ngIf]="FUN_aula32_ComponenteVisivel()">
+                                    <table class="table table-bordered table-responsive m-2">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Adicionao em</th>
+                                                <th>#</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <ng-template ngFor let-item [ngForOf]="aula32_ListaNomes" let-i="index">
+                                                <tr>
+                                                    <td>{{item.nome}}</td>
+                                                    <td>{{item.AdicionadoEm}}</td>
+                                                    <td> <button type="button" class="btn btn-danger btn-sm" (click)="FUN_aula32_Excluir(i)"> <i class="fa fa-trash-o"></i> </button> </td>
+                                                </tr>
+                                            </ng-template>
+                                        </tbody>
+                                    </table>
+                                </ng-template>
 
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 33 ng-content</strong>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title"><strong> Permite obter elementos HTML direto do componente pai</strong></p>
+                                <p class="card-text">Nesse caso os elementos HTML foram adicioandos em <strong>app.component.ts</strong>, que é o componente principal da aplicação.</p>
+
+                                <ng-content select="span">  </ng-content>
+                                <ng-content select="p"></ng-content>
+
+                          
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4 mt-2">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 05 - Aula 34. Pipes</strong>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Permite a manipulação dos dados</h6>
+                                <p class="card-text"> Permite chamar funções, aplicar formatações entre outros</p>
+
+                                <p><strong>Sem Pipe:</strong> {{aula34_Data}}</p>
+                                <p><strong>Com Pipe:</strong> {{aula34_Data | date: 'dd/MM/yyyy HH:mm:ss'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
+                    <div class="col-sm-5 col-md-4 mt-2" *ngIf="false">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <strong> Seção 0X - Aula XX</strong>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">XXXXXXXXXXXXXXXXXX </h5>
+                                <h6>xxxxxxxxxx </h6>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------------------->
 
 
 
