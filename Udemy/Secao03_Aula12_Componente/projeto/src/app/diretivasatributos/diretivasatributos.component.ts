@@ -61,6 +61,11 @@ public FUN_aula32_ComponenteVisivel():boolean {
   return this.aula32_ListaNomes.length > 0;
 }
 //---------------------------------------------------------------------------------------------------------
+
+public aula34_Data:Date = new Date;
+
+
+//---------------------------------------------------------------------------------------------------------
   private FUN_ObterDataAtual() {
     let DataAtual: Date = new Date;
     let DataTela: string = DataAtual.getDate().toString().padStart(2, '0')
